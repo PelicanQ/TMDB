@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/PelicanQ/TMDB.git/static/css/main.9ce2ab76.chunk.css",
+    "main.js": "/PelicanQ/TMDB.git/static/js/main.f3526102.chunk.js",
+    "main.js.map": "/PelicanQ/TMDB.git/static/js/main.f3526102.chunk.js.map",
+    "runtime-main.js": "/PelicanQ/TMDB.git/static/js/runtime-main.9a4b5524.js",
+    "runtime-main.js.map": "/PelicanQ/TMDB.git/static/js/runtime-main.9a4b5524.js.map",
+    "static/js/2.356c96d9.chunk.js": "/PelicanQ/TMDB.git/static/js/2.356c96d9.chunk.js",
+    "static/js/2.356c96d9.chunk.js.map": "/PelicanQ/TMDB.git/static/js/2.356c96d9.chunk.js.map",
+    "static/js/3.4ef2fe2b.chunk.js": "/PelicanQ/TMDB.git/static/js/3.4ef2fe2b.chunk.js",
+    "static/js/3.4ef2fe2b.chunk.js.map": "/PelicanQ/TMDB.git/static/js/3.4ef2fe2b.chunk.js.map",
+    "index.html": "/PelicanQ/TMDB.git/index.html",
+    "static/css/main.9ce2ab76.chunk.css.map": "/PelicanQ/TMDB.git/static/css/main.9ce2ab76.chunk.css.map",
+    "static/js/2.356c96d9.chunk.js.LICENSE.txt": "/PelicanQ/TMDB.git/static/js/2.356c96d9.chunk.js.LICENSE.txt",
+    "static/media/logo.bf7f470b.svg": "/PelicanQ/TMDB.git/static/media/logo.bf7f470b.svg",
+    "static/media/magglass.02a1a61f.png": "/PelicanQ/TMDB.git/static/media/magglass.02a1a61f.png",
+    "static/media/play.5e9b7060.png": "/PelicanQ/TMDB.git/static/media/play.5e9b7060.png",
+    "static/media/roll.c999b40a.png": "/PelicanQ/TMDB.git/static/media/roll.c999b40a.png",
+    "static/media/rollBackdrop.368c6e4e.png": "/PelicanQ/TMDB.git/static/media/rollBackdrop.368c6e4e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a4b5524.js",
+    "static/js/2.356c96d9.chunk.js",
+    "static/css/main.9ce2ab76.chunk.css",
+    "static/js/main.f3526102.chunk.js"
+  ]
+}
