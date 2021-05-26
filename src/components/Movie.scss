@@ -1,0 +1,45 @@
+
+.Movie {
+    position: relative;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: flex-end;*/
+    width: 182px;
+    height: var(--movieHeight);
+    overflow: hidden;
+    background-color: #000;
+    img {
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .missingPoster {
+        filter: invert(100%); 
+        height: 90%;
+        transform: translate(-55%, -50%);
+
+    }
+    .movieTitle {
+        width: 100%;
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .overlay {
+        box-sizing: border-box;
+        visibility: hidden;
+        background: linear-gradient(to top, #000 0%, transparent 100%);
+        padding-bottom: 1em;
+    }
+}
+
+.Movie:hover .overlay {
+    visibility: visible;
+}
+.Movie:hover {
+    box-shadow: 0 0 1.4em 0.0em #444;
+    transform: scale(1.1)
+}

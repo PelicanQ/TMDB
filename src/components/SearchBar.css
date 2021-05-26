@@ -1,0 +1,22 @@
+.SearchBar {
+    grid-column: 3/4;
+    height: 1.2em;
+    width: 50%;
+    justify-self: center;
+    display: inline-flex;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #FFF;
+    white-space: nowrap;
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 0.3em;
+}
+
+.SearchBar .searchIcon {
+    height: 90%;
+}
+
+.searchIcon img {
+    height: 100%;
+}

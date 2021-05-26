@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0
+}
+body {
+    margin: 0; /*Here I put poppins first*/
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
+    background-color: black;
+    color: #FFF;
+    --lineBreakColor: #555;
+    --myBlue: #32387f;
+    --myBrightBlue: #52589f;
+    --movieHeight: 17em;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+input {
+    border: 0;
+    outline: 0;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+ul {
+    display: flex;
+    list-style: none;
+    grid-column: 2/3;
+    padding: 0;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to top, #000 0%, transparent 60%);
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: stretch;
+    cursor: pointer;
+    color: #FFF;
+}
+.movieGenres {
+    width: 100%;
+    flex-wrap: nowrap;
+    grid-column: 2 / 3;
+    grid-row-start: 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.genreItem {
+    background-color: var(--myBlue);
+    color: #FFF;
+    font-size: 0.7em;
+    padding: 0.2em;
+    border-radius: 1em;
+    margin: 0 0.1em;
+}
+.spreadHoriz {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.underLine {
+    border-bottom: 1px solid var(--lineBreakColor);
+}
+.clickable {
+    cursor: pointer;
+}
+.listTitle {
+    grid-column: 2/3;
+    margin-bottom: 1em;
+    text-align: left;
+    font-size: 1.4em;
+    border-bottom: 1px solid var(--lineBreakColor);
+}
+.dropDownArrow {
+    width: 1em;
+    vertical-align: middle;
+    filter: invert(100%);
+    transform: rotate(0deg);
+    &.rotated {
+        transform: rotate(180deg);
+    }
+    transition: transform 0.4s;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .MoviesList {grid-template-columns: repeat(1, 1fr)}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .MoviesList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .MoviesList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .MoviesList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .MoviesList {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}

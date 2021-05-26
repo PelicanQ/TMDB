@@ -1,0 +1,24 @@
+.Welcome {
+	display: grid;
+	grid-template-columns: 1fr 70% 1fr;
+	grid-template-rows: auto;
+	margin-top: 2em;
+	.listTitle {
+		margin-top: 0.6em;
+	}
+	.MoviesList {
+		grid-column: 2/3;
+		justify-content: space-between;
+		overflow-y: hidden;
+		grid-row-gap: 0;
+		&.collapsed {
+			grid-auto-rows: 0;
+		}	
+		.Movie {
+			margin: 1em 0;
+		}
+	}
+	
+}
+
+
