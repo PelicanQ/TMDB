@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/TMDB/static/css/main.9ce2ab76.chunk.css",
-    "main.js": "/TMDB/static/js/main.f3526102.chunk.js",
-    "main.js.map": "/TMDB/static/js/main.f3526102.chunk.js.map",
-    "runtime-main.js": "/TMDB/static/js/runtime-main.e6fbeb5c.js",
-    "runtime-main.js.map": "/TMDB/static/js/runtime-main.e6fbeb5c.js.map",
-    "static/js/2.356c96d9.chunk.js": "/TMDB/static/js/2.356c96d9.chunk.js",
-    "static/js/2.356c96d9.chunk.js.map": "/TMDB/static/js/2.356c96d9.chunk.js.map",
-    "static/js/3.4ef2fe2b.chunk.js": "/TMDB/static/js/3.4ef2fe2b.chunk.js",
-    "static/js/3.4ef2fe2b.chunk.js.map": "/TMDB/static/js/3.4ef2fe2b.chunk.js.map",
+    "main.css": "/TMDB/static/css/main.90cf4c89.chunk.css",
+    "main.js": "/TMDB/static/js/main.95745152.chunk.js",
+    "main.js.map": "/TMDB/static/js/main.95745152.chunk.js.map",
+    "runtime-main.js": "/TMDB/static/js/runtime-main.95644b3d.js",
+    "runtime-main.js.map": "/TMDB/static/js/runtime-main.95644b3d.js.map",
+    "static/js/2.9244e791.chunk.js": "/TMDB/static/js/2.9244e791.chunk.js",
+    "static/js/2.9244e791.chunk.js.map": "/TMDB/static/js/2.9244e791.chunk.js.map",
+    "static/js/3.cca8cf98.chunk.js": "/TMDB/static/js/3.cca8cf98.chunk.js",
+    "static/js/3.cca8cf98.chunk.js.map": "/TMDB/static/js/3.cca8cf98.chunk.js.map",
     "index.html": "/TMDB/index.html",
-    "static/css/main.9ce2ab76.chunk.css.map": "/TMDB/static/css/main.9ce2ab76.chunk.css.map",
-    "static/js/2.356c96d9.chunk.js.LICENSE.txt": "/TMDB/static/js/2.356c96d9.chunk.js.LICENSE.txt",
+    "static/css/main.90cf4c89.chunk.css.map": "/TMDB/static/css/main.90cf4c89.chunk.css.map",
+    "static/js/2.9244e791.chunk.js.LICENSE.txt": "/TMDB/static/js/2.9244e791.chunk.js.LICENSE.txt",
     "static/media/logo.bf7f470b.svg": "/TMDB/static/media/logo.bf7f470b.svg",
     "static/media/magglass.02a1a61f.png": "/TMDB/static/media/magglass.02a1a61f.png",
     "static/media/play.5e9b7060.png": "/TMDB/static/media/play.5e9b7060.png",
@@ -19,9 +19,9 @@
     "static/media/rollBackdrop.368c6e4e.png": "/TMDB/static/media/rollBackdrop.368c6e4e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e6fbeb5c.js",
-    "static/js/2.356c96d9.chunk.js",
-    "static/css/main.9ce2ab76.chunk.css",
-    "static/js/main.f3526102.chunk.js"
+    "static/js/runtime-main.95644b3d.js",
+    "static/js/2.9244e791.chunk.js",
+    "static/css/main.90cf4c89.chunk.css",
+    "static/js/main.95745152.chunk.js"
   ]
 }
