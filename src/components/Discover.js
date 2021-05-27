@@ -8,7 +8,7 @@ import './Discover.scss'
 
 const Discover = ({ CONFIG }) => {
 	const [data, setData] = useState({ results: [] })
-	const [filter, setFilter] = useState({ range: { min: 0, max: 10 }, selectedGenres: new Set() })
+	const [filter, setFilter] = useState({ selectedGenres: new Set() })
 	let history = useHistory()
 
 	useEffect(() => {
@@ -17,7 +17,7 @@ const Discover = ({ CONFIG }) => {
 			const fetchedData = await util.fetchDiscover('popularity.desc', { ...filter, page: params.get('page') })
 			setData(fetchedData)
 		}
-		init()
+		init() //If filter or location (eg '?page=2') changes, fetch again
 	}, [history.location, filter])
 
 	const navPage = (num, absolute) => {
@@ -32,7 +32,7 @@ const Discover = ({ CONFIG }) => {
 	return <div className='Discover'>
 
 		<p className='listTitle'>Discover</p>
-		<Filter onFilterChange={setFilter} allGenres={CONFIG.current.genres} showThese={['rating', 'release', 'adult', 'genres']}/>
+		<Filter onFilterChange={setFilter} CONFIG={CONFIG} showThese={['rating', 'release', 'adult', 'genres']}/>
 
 		<MoviesList movies={data.results} CONFIG={CONFIG} />
 

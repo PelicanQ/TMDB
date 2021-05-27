@@ -4,6 +4,7 @@ import MoviesList from './MoviesList'
 
 const Collapsable = ({ CONFIG, movies, title }) => {
 	const [collapsed, setCollapsed] = useState(true)
+
 	return <>
 		<h2 className='listTitle clickable' onClick={() => setCollapsed(prev => !prev)}>
 			{title}

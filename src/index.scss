@@ -26,6 +26,9 @@ input {
 a {
     text-decoration: none;
     color: unset;
+    &:focus {
+        outline: 0;
+    }
 }
 ul {
     display: flex;

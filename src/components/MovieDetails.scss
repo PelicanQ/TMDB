@@ -20,10 +20,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, calc(var(--actorWidth) + 1em));
         grid-template-rows: auto;
-
+        
         &.collapsed {
             grid-auto-rows: 0;
-            overflow-y: hidden;
+            overflow: hidden;
         }
     }
 

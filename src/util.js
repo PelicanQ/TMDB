@@ -36,12 +36,12 @@ const fetchTrending = async () => {
 }
 const getMovieDetails = async (id) => {
     //Gets details about one movie
-    if (!id) return {}
+    if (!id) return false
     const url = new URL(`https://api.themoviedb.org/3/movie/${id}`)
     url.searchParams.set('api_key', API_KEY)
     url.searchParams.set('append_to_response', 'videos,credits,reviews')
 
-    return fetch(url).then(res => res.json())
+    return fetch(url).then(resp => resp.ok && resp.json())
 }
 const fetchReviews = async () => {
     const session = await getGuestSession()

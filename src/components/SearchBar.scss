@@ -11,12 +11,13 @@
     border-radius: 1em;
     overflow: hidden;
     padding: 0.3em;
-}
-
-.SearchBar .searchIcon {
-    height: 90%;
-}
-
-.searchIcon img {
-    height: 100%;
+    .searchIcon {
+        height: 90%;
+    }
+    img {
+        height: 100%;
+    }
+    input {
+        width: 100%;
+    }
 }

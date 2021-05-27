@@ -11,17 +11,19 @@ const Poster = ({ details, CONFIG }) => {
     const hasVideo = details.videos.results.length > 0
     
     return <>
-        {hasVideo && showTrailer &&  <img id='closeTrailer' width='50' height='50' src={crossImg} alt='cross' onClick={() => setTrailer(prev => !prev)} />}
+        {hasVideo && showTrailer &&
+            <img id='closeTrailer' width='50' height='50' src={crossImg}
+                 alt='Close trailer' onClick={() => setTrailer(prev => !prev)} />}
 
         <div className='Poster'>
             {hasVideo && showTrailer && <iframe
-            className='trailerFrame'
-            frameBorder='0'
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title='Trailer'
-            src={`https://www.youtube.com/embed/${details.videos.results.find(vid => vid.site.toLowerCase() === 'youtube').key
-        }`}></iframe>}
+                className='trailerFrame'
+                frameBorder='0'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title='Trailer' //Look for the youtube video (I assume they have it)
+                src={`https://www.youtube.com/embed/${details.videos.results.find(vid => vid.site.toLowerCase() === 'youtube').key}`
+        }></iframe>}
 
         <img className='posterImg' src={backdropPath} />
 

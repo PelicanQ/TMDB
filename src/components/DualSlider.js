@@ -9,11 +9,11 @@ const DualSlide = ({ onChange, minMax = [0, 100], step = 1 }) => {
         onChange([min, max])
     }, [min, max])
 
-    const updateMin = (e) => {
+    const updateMin = (e) => { //Prevent min from going greater than max
         const newVal = parseFloat(e.target.value) > max ? max : parseFloat(e.target.value)
         setMin(newVal)
     }
-    const updateMax = (e) => {
+    const updateMax = (e) => { //Prevent max from going less than min
         const newVal = parseFloat(e.target.value) < min ? min : parseFloat(e.target.value)
         setMax(newVal)
     }
@@ -22,12 +22,10 @@ const DualSlide = ({ onChange, minMax = [0, 100], step = 1 }) => {
         <p>
             <span>Min {min}</span>
             <input value={min} onChange={updateMin} type='range' min={minMax[0]} max={minMax[1]} step={step} />
-            
         </p>
         <p>
             <span>Max {max}</span>
             <input value={max} onChange={updateMax} type='range' min={minMax[0]} max={minMax[1]} step={step} />
-            
         </p>
     </div>
 }

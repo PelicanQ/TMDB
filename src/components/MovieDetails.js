@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import * as util from '../util'
 import Poster from './Poster'
 import Review from './Review'
@@ -7,27 +8,31 @@ import './MovieDetails.scss'
 import missingProfilePic from '../images/missingProfile.png'
 import dropArrow from '../images/arrow.png'
 
-
 const MovieDetials = ({ location, CONFIG }) => {
     const [details, setDetails] = useState({})
-    const [isLoaded, setLoaded] = useState(false)
+    const [isLoaded, setLoaded] = useState(false)  //We'll only render after api call
     const [actorsCollapsed, setActorsCollapsed] = useState(true)
     const imgConf = CONFIG.current.images
     const profileBaseUrl = imgConf.base_url + imgConf.profile_sizes[1]
-    
-    useEffect(() => {
+    let history = useHistory()
+   
+    useEffect(() => {//Fetch details on mount
         const init = async () => {
             const params = new URLSearchParams(location.search)
-            const fetchedMovie = await util.getMovieDetails(params.get('id'))
+            const fetchedMovie = await util.getMovieDetails(params.get('id'))   
+
+            if (!fetchedMovie) //If failed, Go back to root
+                return history.replace('/')
+
+            //Success, go ahed with render
             setDetails(fetchedMovie)
             setLoaded(true)
         }
-
         init()
     }, [])
 
-    const onSubmit = async (rating) => {
-        return await util.postReview(details.id, parseFloat(rating))
+    const onSubmit = async (rating) => { //Return boolean indicating success to ReviewForm
+        return util.postReview(details.id, parseFloat(rating))
     }
 
     return <div className='MovieDetails'>{isLoaded && (<>

@@ -13,49 +13,48 @@ import * as util from './util'
 function App() {
 
     const [isLoaded, setLoaded] = useState(false)
-    const CONFIG = useRef({ genres: {}, images: {} })
+    const CONFIG = useRef({ genres: {}, images: {} }) //Child components need API config for image paths
 
     useEffect(() => {
         const asyncFunc = async () => {
             const config = await util.getConfig()
-            CONFIG.current.images = config.images
+            CONFIG.current.images = config.images //Save the image config and genres in out CONFIG
             config.genres.forEach(genre => CONFIG.current.genres[genre.id] = genre.name)
 
-            let date = new Date()
+            let date = new Date() 
             date = [date.getFullYear(), date.getMonth(), date.getDate()]
             date = date.map(elm => elm.toString())
             date[1] = date[1].padStart(2, '0')
             date[2] = date[2].padStart(2, '0')
-            CONFIG.current.today = date.join('-')
+            CONFIG.current.today = date.join('-') //Get today as string so children dont have to 
 
             setLoaded(true)
         }
-        
         asyncFunc()
     }, [])
 
-
   return (
       <div className="App">
-
-        <Header />
+            <Header />
 
             {isLoaded &&
             <Switch>
                 <Route path='/' exact={true} component={(props) =>
-                    <Welcome location={props.location} CONFIG={CONFIG} /> 
-                }/>
-                <Route path='/search' render={({location}) =>
+                  <Welcome location={props.location} props={props} CONFIG={CONFIG} /> 
+                } />
+                <Route path='/search' component={({location}) =>
                     <SearchResults CONFIG={CONFIG} location={location} />
-                }/>
+                } />
                 <Route path='/movie' component={(props) => 
                     <MovieDetails location={props.location} CONFIG={CONFIG} />
                 } />
                 <Route path='/discover' component={({ location }) =>
                     <Discover location={location} CONFIG={CONFIG} />} />
-                <Route component={(routeProps) => 
-                    <UserReviews CONFIG={CONFIG} />  
-                }/>
+                <Route path='/userReviews' component={(routeProps) =>
+                  <UserReviews CONFIG={CONFIG} />
+                } />
+                <Route component={() => <p>Page not found</p>
+                } />
                 
               </Switch>}
             <Footer />
@@ -63,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

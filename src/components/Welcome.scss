@@ -9,7 +9,7 @@
 	.MoviesList {
 		grid-column: 2/3;
 		justify-content: space-between;
-		overflow-y: hidden;
+		overflow: hidden;
 		grid-row-gap: 0;
 		&.collapsed {
 			grid-auto-rows: 0;

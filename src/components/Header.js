@@ -1,15 +1,15 @@
 import SearchBar from './SearchBar'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
 const Header = (props) => {
-    return <div className='Header'>
-        <Link to='/'><h1>Movies</h1></Link>
-        <ul className='navBar'>
-            
 
-            <Link to='/discover'><li>Discover</li></Link>
-            <Link to='/userReviews'><li>Your Reviews</li></Link>
+    //NavLinks because they have activeStyles
+    return <div className='Header'>
+        <NavLink to='/'><h1>Movies</h1></NavLink>
+        <ul className='navBar'>
+            <NavLink to='/discover' activeClassName='activeLink'><li>Discover</li></NavLink>
+            <NavLink to='/userReviews' activeClassName='activeLink'><li>Your Reviews</li></NavLink>
         </ul>
         <SearchBar />
     </div>

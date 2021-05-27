@@ -24,7 +24,7 @@
         margin: 0 auto;
         white-space: normal;
         text-align: left;
-
+        text-overflow: clip;
         .genreItem {
             display: inline-block;
             font-size: 0.9em;
@@ -34,6 +34,9 @@
 
             &.selected {
                 background-color: var(--myBlue);
+            }
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }

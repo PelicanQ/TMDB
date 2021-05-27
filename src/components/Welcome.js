@@ -3,14 +3,14 @@ import * as util from '../util'
 import Collapsable from './Collapsable'
 import './Welcome.scss'
 
-const Welcome = ({ CONFIG }) => {
+const Welcome = ({ CONFIG, props }) => {
 	const [topVoted, setTopVoted] = useState([])
 	const [newest, setNewest] = useState([])
 	const [trending, setTredning] = useState([])
 
 	useEffect(() => {
-		const init = async () => {
-			const todayStr = (new Date()).toJSON().substring(0, 10)
+		const init = async () => { //Fetch a variety of movies
+			const todayStr = CONFIG.current.today
 			const topMovies = await util.fetchDiscover('vote_average.desc')
 			const newMovies = await util.fetchDiscover('primary_release_date.desc', { maxDate: todayStr })
 			const trending = await util.fetchTrending()	

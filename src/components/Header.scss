@@ -18,8 +18,11 @@
             box-sizing: border-box;
         }
         li:hover {
-            border-bottom: 3px solid var(--myBrightBlue);
+            
             /* transform: scale(1.2);*/
+        }
+        .activeLink {
+            border-bottom: 3px solid var(--myBrightBlue);
         }
     }
 }

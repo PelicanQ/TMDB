@@ -4,7 +4,6 @@ import './NavBar.scss'
 const NavBar = ({ page, maxPages, navPage }) => {
 
 	return <p className='NavBar'>
-		
 		<button onClick={() => navPage(1, true)}></button>
 		<button onClick={() => navPage(-1)}></button>
 		<span style={{ whiteSpace: 'nowrap' }}>{page} / {maxPages}</span>
