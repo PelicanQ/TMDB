@@ -5,11 +5,11 @@ import './SearchBar.scss'
 
 const SearchBar = () => {
 	const [query, setQuery] = useState('')
-	let history = useHistory() //We'll handle routing here. Makes component less generic though
+	let history = useHistory() //I'll handle routing here. Makes component less generic though
 
 	const handleKeyDown = (e) => {
 		if (e.key !== 'Enter')
-			return
+			return;
 		if (query == '')
 			return history.push('/'); //If enter was clicked with no search term, go to home
 		

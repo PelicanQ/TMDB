@@ -1,4 +1,3 @@
-
 import './NavBar.scss'
 
 const NavBar = ({ page, maxPages, navPage }) => {

@@ -11,9 +11,7 @@
 		justify-content: space-between;
 		overflow: hidden;
 		grid-row-gap: 0;
-		&.collapsed {
-			grid-auto-rows: 0;
-		}	
+		
 		.Movie {
 			margin: 1em 0;
 		}

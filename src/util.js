@@ -19,7 +19,6 @@ const fetchDiscover = async (sort, filter = {}) => {
     filter.maxVote && url.searchParams.set('vote_average.lte', filter.maxVote)
     filter.minYear && url.searchParams.set('primary_release_date.gte', `${filter.minYear}-01-01`)
     filter.maxYear && url.searchParams.set('primary_release_date.lte', `${filter.maxYear}-12-31`)
-    filter.maxDate && url.searchParams.set('primary_release_date.lte', filter.maxDate)
     url.searchParams.set('include_adult', filter.showAdult ? true : false)
 
     if (filter.selectedGenres && filter.selectedGenres.size > 0) {

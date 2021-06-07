@@ -7,15 +7,14 @@ import Discover from './components/Discover'
 import UserReviews from './components/UserReviews'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import './App.scss';
+import './App.scss'
 import * as util from './util'
 
 function App() {
-
     const [isLoaded, setLoaded] = useState(false)
     const CONFIG = useRef({ genres: {}, images: {} }) //Child components need API config for image paths
 
-    useEffect(() => {
+    useEffect(() => { //Some initial setup
         const asyncFunc = async () => {
             const config = await util.getConfig()
             CONFIG.current.images = config.images //Save the image config and genres in out CONFIG

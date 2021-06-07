@@ -12,12 +12,12 @@ const SearchResults = ({ CONFIG }) => {
 	const [filter, setFilter] = useState({})
 	let history = useHistory()
 	
-	useEffect(() => {
+	useEffect(() => { //Will be called when search query changes in url
 		const getSearch = async () => {
 			const params = new URLSearchParams(history.location.search)
 			if (!params.get('q')) return;
-			const fetchedData = await util.fetchSearch(params.get('q'), params.get('page'))
 
+			const fetchedData = await util.fetchSearch(params.get('q'), params.get('page'))
 			setData(fetchedData)
 		}
 		getSearch()
@@ -33,6 +33,7 @@ const SearchResults = ({ CONFIG }) => {
 	}
 
 	const params = new URLSearchParams(history.location.search)
+
 	return <div className='SearchResults'>
 		<p className='listTitle'><small>Showing results for:</small> {params.get('q')}</p>
 
