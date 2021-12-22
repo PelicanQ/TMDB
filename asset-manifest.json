@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TMDB/static/css/main.69c00332.chunk.css",
+    "main.css": "/TMDB/static/css/main.a877aeee.chunk.css",
     "main.js": "/TMDB/static/js/main.84f19c51.chunk.js",
     "main.js.map": "/TMDB/static/js/main.84f19c51.chunk.js.map",
     "runtime-main.js": "/TMDB/static/js/runtime-main.95644b3d.js",
@@ -10,7 +10,7 @@
     "static/js/3.cca8cf98.chunk.js": "/TMDB/static/js/3.cca8cf98.chunk.js",
     "static/js/3.cca8cf98.chunk.js.map": "/TMDB/static/js/3.cca8cf98.chunk.js.map",
     "index.html": "/TMDB/index.html",
-    "static/css/main.69c00332.chunk.css.map": "/TMDB/static/css/main.69c00332.chunk.css.map",
+    "static/css/main.a877aeee.chunk.css.map": "/TMDB/static/css/main.a877aeee.chunk.css.map",
     "static/js/2.598b874d.chunk.js.LICENSE.txt": "/TMDB/static/js/2.598b874d.chunk.js.LICENSE.txt",
     "static/media/logo.bf7f470b.svg": "/TMDB/static/media/logo.bf7f470b.svg",
     "static/media/magglass.02a1a61f.png": "/TMDB/static/media/magglass.02a1a61f.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.95644b3d.js",
     "static/js/2.598b874d.chunk.js",
-    "static/css/main.69c00332.chunk.css",
+    "static/css/main.a877aeee.chunk.css",
     "static/js/main.84f19c51.chunk.js"
   ]
 }
